@@ -28,6 +28,12 @@ app.use("/", index);
 const authRoutes = require('./routes/auth.routes');
 app.use('/', authRoutes);
 
+const postRoutes = require('./routes/posts.routes.js');
+app.use('/', postRoutes);
+
 require("./error-handling")(app);
+
+// const imgur = require('imgur');
+// const fileUpload = require('express-fileupload');
 
 module.exports = app;

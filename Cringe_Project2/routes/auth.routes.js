@@ -2,7 +2,8 @@
 
 const { Router } = require("express");
 const router = new Router();
-
+// const imgur = require('imgur');
+// const fileUpload = require('express-fileupload');
 const bcryptjs = require("bcryptjs");
 const serveFavicon = require("serve-favicon");
 const UserModel = require("../models/User.model");
@@ -33,7 +34,7 @@ router.post('/signup', (req, res, next) => {
     .catch((error) => next(error));
 });
 
-router.get('/userProfile', isLoggedIn, (req, res) => {
+router.get('/profile', isLoggedIn, (req, res) => {
     res.render('users/user-profile', { userInSession: req.session.currentUser});
 })
 
@@ -60,7 +61,7 @@ const { email, password } = req.body;
       }
       else if (bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
-        res.redirect('/userProfile');
+        res.redirect('/profile');
       } else {
         res.render('auth/login', { errorMessage: 'Incorrect password.' });
       }
