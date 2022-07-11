@@ -1,0 +1,11 @@
+body {
+    font-family: 'VT323', monospace;
+    background-color:black;
+    color: white;
+}
+
+#title {
+    text-align: center;
+    font-size: 100px;
+    letter-spacing: 1.5em;
+}
