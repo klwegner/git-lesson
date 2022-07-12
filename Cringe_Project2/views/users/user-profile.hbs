@@ -1,66 +1,149 @@
 {{#if userInSession}}
-<h2>Your profile</h2>
+  <h2>Your profile</h2>
+  <div id="profileMainArea">
+    <div id="pfp">
+      <img src="/images/IMG_9578.jpg" width="400px" />
+    </div>
 
-<img src="/images/IMG_9578.jpg" width= 400px/>
+    <div id="profileInfo">
+      <h3> Greetings {{userInSession.email}}</h3>
+      <p> &#128081; Queen of Cringe &#128556;</p>
 
+    </div>
+  </div>
+  <h2>Your Cringe</h2>
+  <div id="myPosts">
 
-
-
-<h2>Your Cringe</h2>
-<div id="myPosts"> 
-
-    {{!-- will need to have a loop going that autopopulates this --}}
+    {{! will need to have a loop going that autopopulates this }}
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
 
     <div>
-       <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
+
     </div>
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
 
     <div>
-        <img src="/images/200pixel.png"/>
+      <img src="/images/200pixel.png" />
     </div>
-</div>
+  </div>
 
+  <h2> Cringe Comrades</h2>
+  <div id="friendsList">
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
 
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
 
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
 
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
 
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
 
-<h2> Cringe Comrades</h2>
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
 
-<h2> Favorites</h2>
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+  </div>
+  <h2> Favorites</h2>
+
+  <div id="favorites">
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+    <div>
+      <img src="/images/200pixel.png" />
+    </div>
+
+  </div>
 
 {{else}}
 
-Please login to see your profile.
+  Please login to see your profile.
 
 {{/if}}
-
-

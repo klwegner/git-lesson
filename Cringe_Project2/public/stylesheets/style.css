@@ -1,5 +1,5 @@
 body {
-    font-family: 'VT323', monospace;
+    font-family: 'VT323';
     background-color:black;
     color: white;
 }
@@ -15,6 +15,7 @@ body {
 }
 
 nav {
+    font-family: 'Share Tech Mono', monospace;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,16 +24,6 @@ nav {
     color: white;
     margin: 10px;
    
-}
-
-#myPosts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#myPosts div {
-    margin:50px;
 }
 
 #feed {
@@ -46,6 +37,73 @@ nav {
     margin: 10px 0 0 0;
 }
 
-h2, h1 {
+h1 {
     text-align: center;
+}
+
+h2, h3 {
+    font-family: 'Share Tech Mono', monospace;
+    text-align: center;
+}
+
+p {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#profileMainArea {
+    display: flex;
+    flex-direction: row;
+}
+
+#profileInfo {
+    margin:25px;
+}
+
+#friendsList {
+    overflow: auto;
+    white-space: nowrap;
+    width:80%;
+    margin:10% 0;
+}
+
+#friendsList div {
+    display: inline-block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+}
+
+#favorites {
+    overflow: auto;
+    white-space: nowrap;
+    width:80%;
+    margin:10% 0;
+}
+
+#favorites div {
+    display: inline-block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+}
+#favorites div:hover {
+    background-color: #777;
+}
+
+#myPosts div {
+    display: inline-block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+  }
+
+#myPosts div:hover {
+    background-color: #777;
+  }
+
+#myPosts {
+    overflow: auto;
+    white-space: nowrap;
+    width:80%;
+    margin:10% 0;
 }
