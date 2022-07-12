@@ -13,7 +13,10 @@ const userSchema = new Schema(
         passwordHash: {
             type: String,
             required: [true, 'password is required']
-        }
+        },
+
+        cringeArray:  [{ type: Schema.Types.ObjectId, ref: 'Cringepost' }]
+    
     },
     {
         timestamps: true

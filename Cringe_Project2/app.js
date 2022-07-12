@@ -33,7 +33,4 @@ app.use('/', postRoutes);
 
 require("./error-handling")(app);
 
-// const imgur = require('imgur');
-// const fileUpload = require('express-fileupload');
-
 module.exports = app;

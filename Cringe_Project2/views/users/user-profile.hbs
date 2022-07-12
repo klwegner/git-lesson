@@ -14,46 +14,13 @@
   <h2>Your Cringe</h2>
   <div id="myPosts">
 
-    {{! will need to have a loop going that autopopulates this }}
-
+{{#each userInSession.cringeArray}}
     <div>
-      <img src="/images/200pixel.png" />
+      <img src="{{this.imageUrl}}" />
     </div>
+{{/each}}
 
-    <div>
-      <img src="/images/200pixel.png" />
-    </div>
-
-    <div>
-      <img src="/images/200pixel.png" />
-
-    </div>
-
-    <div>
-      <img src="/images/200pixel.png" />
-    </div>
-
-    <div>
-      <img src="/images/200pixel.png" />
-    </div>
-
-    <div>
-      <img src="/images/200pixel.png" />
-    </div>
-
-    <div>
-      <img src="/images/200pixel.png" />
-    </div>
-
-    <div>
-      <img src="/images/200pixel.png" />
-    </div>
-
-    <div>
-      <img src="/images/200pixel.png" />
-    </div>
-  </div>
-
+</div>
   <h2> Cringe Comrades</h2>
   <div id="friendsList">
     <div>

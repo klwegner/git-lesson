@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
 
 <h1>Daily Cringe</h1>
 
@@ -5,10 +7,12 @@
 
 {{#each allPosts}}
 <div>
-    <h3>{{this.title}}</h3>
+    <h3 id="postTitle">{{this.title}}</h3>
     <img src="{{this.imageUrl}}" />
-    <p>Rate this image</p>
+
 </div>
+
+
 
 {{/each}}
 

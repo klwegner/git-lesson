@@ -29,13 +29,19 @@ router.post('/signup', (req, res, next) => {
     })
     .then((createdUser) => {
         console.log('newly created user', createdUser);
-        res.redirect('/userProfile')
+        res.redirect('/profile')
     })
     .catch((error) => next(error));
 });
 
 router.get('/profile', isLoggedIn, (req, res) => {
-    res.render('users/user-profile', { userInSession: req.session.currentUser});
+  User.findById(req.session.currentUser._id)
+  .populate('cringeArray')
+    .then((myUser) => {
+      console.log(myUser);
+      res.render('users/user-profile', { userInSession: myUser});
+    })
+    .catch((err) => res.send(err));
 })
 
 router.get('/login', (req, res) => res.render('auth/login'));

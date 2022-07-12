@@ -5,6 +5,7 @@ const pictureSchema = new Schema (
 {
   title: String, 
   imageUrl: String,
+  userId: {type: Schema.Types.ObjectId, ref: 'User'}
 }, 
 {
     timestamps: true

@@ -26,6 +26,9 @@
   "devDependencies": {
     "nodemon": "^2.0.19"
   },
+  "engines": {
+    "node": "16.15.0"
+  },
   "name": "project2_ironlauncher",
   "version": "1.0.0",
   "main": "app.js",
