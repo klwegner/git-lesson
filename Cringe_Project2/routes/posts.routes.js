@@ -9,7 +9,7 @@ const CringePost = require('../models/cringepost.model')
 
 // router.get('/post/create', (req, res) => res.render('auth/login'));
 
-router.get('/post/create', (req, res) => res.render('create-post.hbs'))
+router.get('/post/create', isLoggedIn, (req, res) => res.render('create-post.hbs'))
 
 router.post('/post/create', fileUploader.single('postImage'), (req, res) => {
     const title = req.body.title
@@ -17,7 +17,6 @@ router.post('/post/create', fileUploader.single('postImage'), (req, res) => {
     CringePost.create({ title, imageUrl: req.file.path })
       .then(freshCringe => {
         console.log(freshCringe);
-        res.send('Successful upload')
         res.redirect('/profile')
       })
       .catch(error => console.log(`Error while creating a new movie: ${error}`));

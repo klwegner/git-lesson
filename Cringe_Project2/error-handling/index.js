@@ -1,3 +1,4 @@
+
 module.exports = (app) => {
     app.use((req, res, next) => {
       // this middleware runs whenever requested page is not available
@@ -11,7 +12,10 @@ module.exports = (app) => {
   
       // only render if the error ocurred before sending the response
       if (!res.headersSent) {
-        res.status(500).render("error");
+        if (err.message.includes('Image file format')){
+          res.status(500).send('File format not allowed')
+        }
+       else {res.status(500).render("error")}
       }
     });
   };

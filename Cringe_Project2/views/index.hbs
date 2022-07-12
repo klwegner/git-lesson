@@ -1,2 +1,16 @@
 
-<h1>Main Page</h1>
+<h1>Daily Cringe</h1>
+
+<div id="feed">
+
+{{#each allPosts}}
+<div>
+    <h3>{{this.title}}</h3>
+    <img src="{{this.imageUrl}}" />
+    <p>Rate this image</p>
+</div>
+
+{{/each}}
+
+</div>
+

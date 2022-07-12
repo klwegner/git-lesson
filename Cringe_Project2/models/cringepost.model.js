@@ -11,4 +11,6 @@ const pictureSchema = new Schema (
 }
 );
 
-module.exports = model('Cringepost', pictureSchema);
+const Post = model('Cringepost', pictureSchema);
+
+module.exports = Post;
