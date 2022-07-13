@@ -7,8 +7,9 @@
 
 {{#each allPosts}}
 <div>
-    <h3 id="postTitle">{{this.title}}</h3>
-    <img src="{{this.imageUrl}}" />
+    <h3 class="postTitle">{{this.title}}</h3>
+   <a href="/post/{{this._id}}"> <img src="{{this.imageUrl}}" /> </a>
+
 
 </div>
 

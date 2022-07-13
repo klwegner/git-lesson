@@ -1,17 +1,18 @@
 body {
     font-family: 'VT323';
-    background-color:black;
+    background-color:rgb(18, 17, 17);
     color: white;
+margin:auto;
+height:100%;
 }
 
 #title {
     text-align: center;
-    font-size: 100px;
-    letter-spacing: 1.5em;
-    text-size-adjust: auto;
-    margin: 0px;
-
-    /* how to get this to respond to page width change? */
+    font-size: 3.2vw;
+    letter-spacing: 3.2vw;
+    margin: 0 10%;
+    width:80%;
+    display: inline-block;
 }
 
 nav {
@@ -23,24 +24,43 @@ nav {
     margin-top: 10px;
     color: white;
     margin: 10px;
+    background-color: rgb(39, 33, 33);
+    border: 2px solid darkgray;
+    width: 60%;
+    margin-left:20%;
    
 }
 
+nav a {
+color:darkgray;
+text-decoration: none;
+
+}
+
+nav a:hover {
+    color:rgba(255, 255, 255, 0.7);
+}
+
 #feed {
-width:75%;
+width:60%;
 height:auto;
-margin:auto;
+margin:0 20%;
+display: flex;
+flex-wrap: nowrap;
+flex-direction: column;
+align-items: center;
 
 }
 
 #feed img {
-    height: 50%;
-    width: auto;
+    max-width:100%;
+    height:auto;
     margin: 10px 0 0 0;
 }
 
 h1 {
     text-align: center;
+    
 }
 
 h2 {
@@ -55,6 +75,8 @@ p {
 #profileMainArea {
     display: flex;
     flex-direction: row;
+    width:80%;
+    margin:0 10%;
 }
 
 #profileInfo {
@@ -65,7 +87,7 @@ p {
     overflow: auto;
     white-space: nowrap;
     width:80%;
-    margin:10% 0;
+    margin:0 10%;
 }
 
 #friendsList div {
@@ -79,7 +101,7 @@ p {
     overflow: auto;
     white-space: nowrap;
     width:80%;
-    margin:10% 0;
+    margin:0 10%;
 }
 
 #favorites div {
@@ -106,9 +128,66 @@ p {
 #myPosts {
     display: flex;
     overflow: auto;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width:80%;
-    margin:10% 0;
-    height:220px;
+    margin:0 10%;
+    height:240px;
 }
 
+/* not working */
+#title img {
+    height:10vw;
+    width:10vw;
+    
+}
+
+#pfp img{
+    border-radius: 50%;
+}
+
+.form {
+background-color: darkgrey;
+display:flex;
+flex-direction: column;
+height: 25%;
+width:50%;
+margin: 0 25%;
+padding: 2vw;
+
+}
+
+.form label {
+    margin-left: auto;
+
+}
+
+button {
+    width: 15vw;
+    color:white;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'VT323';
+    font-size: 2vw;
+}
+
+button:hover {
+    border:1px solid grey;
+}
+
+label {
+    width:2vw;
+}
+
+/* not working */
+input[type="text"] {
+    width: 13vw;
+}
+
+.postTitle {
+    border-bottom: 0.25vw solid grey;
+}
+
+.individualPost {
+    margin:auto;
+    text-align: center;
+}

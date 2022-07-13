@@ -25,9 +25,21 @@ console.log(response)
         })
         res.redirect('/profile')
       })
-      .catch(error => console.log(`Error while creating a new movie: ${error}`));
+      .catch(error => console.log(`Error while creating a new post: ${error}`));
   });
+
+  router.get('/post/:postId', (req, res)=> {
+  const myPostId= req.params.postId;
+  CringePost.findById(myPostId)
+.then((postResult) => {
+  res.render('cringepost.hbs', postResult)
+})
+.catch(error => console.log(`Error while finding a new post: ${error}`));
+
+  })
    
+
+
 
 
 module.exports = router;
