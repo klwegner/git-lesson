@@ -15,6 +15,10 @@ const userSchema = new Schema(
             required: [true, 'password is required']
         },
 
+        about: {
+            type: String,
+        },
+
         cringeArray:  [{ type: Schema.Types.ObjectId, ref: 'Cringepost' }]
     
     },

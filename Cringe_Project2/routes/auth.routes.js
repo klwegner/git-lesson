@@ -2,8 +2,6 @@
 
 const { Router } = require("express");
 const router = new Router();
-// const imgur = require('imgur');
-// const fileUpload = require('express-fileupload');
 const bcryptjs = require("bcryptjs");
 const serveFavicon = require("serve-favicon");
 const UserModel = require("../models/User.model");
@@ -39,10 +37,50 @@ router.get('/profile', isLoggedIn, (req, res) => {
   .populate('cringeArray')
     .then((myUser) => {
       console.log(myUser);
-      res.render('users/user-profile', { userInSession: myUser});
+let cringeLevel = ' &#128118; Cringe Kid &#128556;'
+        let numOfPosts = myUser.cringeArray.length;
+        if (numOfPosts > 4 && numOfPosts < 10) {
+            cringeLevel = '&#128124; Kinda Cringe &#128556;'
+        }
+        if (numOfPosts > 10 && numOfPosts < 20) {
+          cringeLevel ='&#128130; Captain Cringe &#128556;'
+        }
+        if (numOfPosts > 20 && numOfPosts < 30) {
+          cringeLevel = '&#127863; Cringe Conisseur &#128556;'
+        }
+        else {
+            cringeLevel = '&#128081; King of Cringe &#128556;'
+        }
+
+      res.render('users/user-profile', { userInSession: myUser, cringeLevel });
     })
     .catch((err) => res.send(err));
 })
+
+
+
+
+
+
+
+
+
+
+
+
+router.get('/profile/edit', isLoggedIn, (req, res) => {
+res.render('edit-profile.hbs', {userInSession: req.session.currentUser})
+})
+
+router.post('/profile/edit', isLoggedIn, (req, res) => {
+User.findByIdAndUpdate(req.session.currentUser._id, {about: req.body.about}, {new: true})
+.then((updatedUser) =>{
+  req.session.currentUser = updatedUser;
+  res.redirect('/profile')
+})
+.catch(error => console.log(`Error while updating profile: ${error}`));
+})
+
 
 
 router.get('/login', (req, res) => res.render('auth/login'));
@@ -75,8 +113,6 @@ const { email, password } = req.body;
     })
     .catch(error => next(error));
 });
-
-
 
 router.get('/logout', (req, res, next) => {
   req.session.destroy(err => {

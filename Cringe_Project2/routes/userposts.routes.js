@@ -14,17 +14,6 @@ router.get("/profile", (req, res) => {
     .catch((err) => res.send(err));
 });
 
-//below: edit a post
-// router.get('', (req, res) => {
-//   const postId = req.params.id;
-
-//   something here (api?)
-//     .getOneSomething(postId)
-//     .then((res) => {
-//       res.render('edit-post', { something: response.data });
-//     })
-//     .catch(error => console.log(error));
-// });
 
 
 

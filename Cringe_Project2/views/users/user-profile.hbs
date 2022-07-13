@@ -1,14 +1,16 @@
 {{#if userInSession}}
-  <h2>Your profile</h2>
   <div id="profileMainArea">
     <div id="pfp">
-      <img src="/images/IMG_9578.jpg" width="400px" />
+      <img src="/images/cringeman.png" />
     </div>
 
     <div id="profileInfo">
-      <h3> Greetings {{userInSession.email}}</h3>
-      <p> &#128081; Queen of Cringe &#128556;</p>
-
+      <h2> Greetings {{userInSession.email}}</h2>
+      <h2> 
+     <div id="cringeRating">{{{cringeLevel}}}</div>   
+         </h2>
+      <p>{{userInSession.about}}</p>
+      <button><a href="/profile/edit">Edit Profile</a></button>
     </div>
   </div>
   <h2>Your Cringe</h2>
@@ -109,6 +111,7 @@
 
   </div>
 
+ <button><a href="/">Home</a></button>
 {{else}}
 
   Please login to see your profile.
