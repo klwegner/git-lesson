@@ -19,6 +19,11 @@ const userSchema = new Schema(
             type: String,
         },
 
+        profileImage: {
+            type: String,
+
+        },
+
         cringeArray:  [{ type: Schema.Types.ObjectId, ref: 'Cringepost' }]
     
     },

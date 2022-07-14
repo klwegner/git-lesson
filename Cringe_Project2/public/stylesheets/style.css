@@ -5,6 +5,9 @@ body {
 margin:auto;
 height:100%;
 }
+a {
+    color:white;
+}
 
 #title {
     text-align: center;
@@ -25,20 +28,23 @@ nav {
     color: white;
     margin: 10px;
     background-color: rgb(39, 33, 33);
-    border: 2px solid darkgray;
+    border: .25vw solid darkgray;
     width: 60%;
     margin-left:20%;
+    height:2vw;
    
 }
 
 nav a {
-color:darkgray;
+color:rgb(255, 255, 255);
 text-decoration: none;
-
+font-size: 1.5vw;
+padding: 0 1vw;
 }
 
 nav a:hover {
     color:rgba(255, 255, 255, 0.7);
+    font-family: 'VT323';
 }
 
 #feed {
@@ -173,12 +179,12 @@ padding: 2vw;
 
 #profileInfo > button{
     width: 30%;
-    color:white;
+    color:black;
     border: 1px solid black;
     text-align: center;
     font-family: 'VT323';
     font-size: 1.5vw;
-    margin:2% 45% 0 45%;
+    margin:2% 35% 0 35%;
 }
 
 button {
@@ -215,7 +221,7 @@ input[type="text"] {
 .like-button {
     background-color: rgba(0,0,0,0);
     width:2vw;
-    height:2vw;
+    height:1vw;
     font-size: 2vw;
     color:white;
     padding:0;
@@ -223,7 +229,7 @@ input[type="text"] {
 }
 
 .likes {
-width:4vw;
+width:3vw;
 padding:0;
 margin: 0;
 }
@@ -233,7 +239,7 @@ margin: 0;
     margin-top:1vw;
     font-size: 1.5vw;
     text-align: left;
-    width:6vw;
+    width:5vw;
     
 }
 
@@ -253,6 +259,27 @@ margin: 0;
     margin-top: 2vw;
 }
 
-.postTitle {
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: white rgb(18, 17, 17) ;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 80%;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(18, 17, 17); 
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+  }
 
+button a {
+    color:black;
+    text-decoration: none;
 }

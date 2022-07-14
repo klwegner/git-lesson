@@ -38,9 +38,7 @@ router.get("/post/:postId", (req, res) => {
   const myPostId = req.params.postId;
   CringePost.findById(myPostId)
     .then((postResult) => {
-
 let isMyPost = false;
-
       if (`${req.session.currentUser._id}` == `${postResult.userId}`) {
  isMyPost = true;
       }
